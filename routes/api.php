@@ -2,9 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserController; // Correct namespace
+use App\Http\Controllers\TestController; // Assuming this is correct for TestController
 
-Route::get('/user', [UserController::class, 'get_user']);
-   
-// [UserController::class, 'get_user']
+// Define the route
+Route::get('/users', [UserController::class, 'get_users']); // Matches the method name
