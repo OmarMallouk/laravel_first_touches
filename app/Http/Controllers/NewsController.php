@@ -6,6 +6,23 @@ use Illuminate\Http\Request;
 use App\Models\News;
 
 class NewsController extends Controller{ 
+    function create_news(Request $request){
+            $news = News::create([
+            'content' => $request->content,
+            ]);
+            return response()->json([
+                'new_news'=>$news
+            ]);
+    }
+
+    function get_news(){
+        $users = News::all();
+    
+        return response()->json([
+           "users" => $users
+        ]);
+    }
+    
 
     function store(Request $request){
         $request->validate([
