@@ -13,4 +13,9 @@ Route::middleware('admin')->group(function () {
     Route::post('/news', [NewsController::class, 'store']);
     Route::put('/news/{id}', [NewsController::class, 'update']);
     Route::delete('/news/{id}', [NewsController::class, 'destroy']);
+
+
+    Route::post('/articles', [ArticleController::class, 'store']);
+    Route::put('/articles/{id}', [ArticleController::class, 'update']);
+    Route::delete('/articles/{id}', [ArticleController::class, 'destroy']);
 });
